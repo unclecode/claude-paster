@@ -1,0 +1,51 @@
+{
+    "manifest_version": 3,
+    "name": "Claude Paster",
+    "version": "1.0.0",
+    "description": "Tired of long text inputs automatically converting to attachments in Claude AI? ClaudePaster lets you paste lengthy content while maintaining full text control and editability.",
+    "permissions": ["activeTab", "clipboardRead", "storage"],
+    "host_permissions": ["https://claude.ai/*"],
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        },
+        "theme_icons": [{
+            "light": "icons/icon16-light.png",
+            "dark": "icons/icon16.png",
+            "size": 16
+        }, {
+            "light": "icons/icon48-light.png",
+            "dark": "icons/icon48.png",
+            "size": 48
+        }, {
+            "light": "icons/icon128-light.png",
+            "dark": "icons/icon128.png",
+            "size": 128
+        }]
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+
+    "web_accessible_resources": [
+        {
+            "resources": ["interceptor.js"],
+            "matches": ["https://claude.ai/*"]
+        }
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://claude.ai/*"],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}

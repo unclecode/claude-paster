@@ -1,0 +1,123 @@
+<!-- popup/popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Claude Paste Helper</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+    <h1>Claude Paste Helper</h1>
+
+    <div class="settings-group">
+        <h2>Global Settings</h2>
+        <div class="setting">
+            <span class="setting-label">Enable Extension</span>
+            <div class="setting-control">
+                <div class="toggle-wrapper">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="extensionEnabled">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="setting">
+            <span class="setting-label">Allow Default Paste</span>
+            <div class="setting-control">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="allowDefault">
+                </div>
+            </div>
+            <div class="setting-help">Let the browser handle paste after our processing</div>
+        </div>
+    </div>
+
+    <div class="settings-group">
+        <h2>Delimiter Settings</h2>
+        <div class="setting">
+            <span class="setting-label">Use Delimiters</span>
+            <div class="setting-control">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="useDelimiters">
+                </div>
+            </div>
+        </div>
+        <div class="setting">
+            <span class="setting-label">Open Delimiter</span>
+            <div class="setting-control">
+                <input type="text" id="openDelimiter" class="text-input">
+            </div>
+        </div>
+        <div class="setting">
+            <span class="setting-label">Close Delimiter</span>
+            <div class="setting-control">
+                <input type="text" id="closeDelimiter" class="text-input">
+            </div>
+        </div>
+        <div class="setting">
+            <span class="setting-label">Escape Delimiters</span>
+            <div class="setting-control">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="escapeDelimiters">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="settings-group">
+        <h2>Behavior Settings</h2>
+        <div class="setting">
+            <span class="setting-label">Force Delimiters</span>
+            <div class="setting-control">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="forceDelimiters">
+                </div>
+            </div>
+            <div class="setting-help">Always use delimiters regardless of content</div>
+        </div>
+        <div class="setting">
+            <span class="setting-label">Multiline Only</span>
+            <div class="setting-control">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="multilineOnly">
+                </div>
+            </div>
+            <div class="setting-help">Only use delimiters for multiline content</div>
+        </div>
+        <div class="setting">
+            <span class="setting-label">Length Threshold</span>
+            <div class="setting-control">
+                <input type="number" id="lengthThreshold" class="number-input">
+            </div>
+            <div class="setting-help">Characters before special handling</div>
+        </div>
+    </div>
+
+    <div class="settings-group">
+        <h2>Recovery Settings</h2>
+        <div class="setting">
+            <span class="setting-label">Auto Recover</span>
+            <div class="setting-control">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="autoRecover">
+                </div>
+            </div>
+            <div class="setting-help">Attempt auto-recovery of lost editor</div>
+        </div>
+        <div class="setting">
+            <span class="setting-label">Recovery Interval</span>
+            <div class="setting-control">
+                <input type="number" id="recoveryInterval" class="number-input">
+            </div>
+            <div class="setting-help">Check interval in milliseconds</div>
+        </div>
+    </div>
+
+    <div class="settings-actions">
+        <button id="saveSettings" class="primary-button">Save Settings</button>
+        <button id="resetDefaults" class="secondary-button">Reset</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
