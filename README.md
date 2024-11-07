@@ -9,6 +9,9 @@ Seeing lots of folks annoyed when Claude turns their long pastes into attachment
 - Gives you full control over your text input
 - Simple toggle in settings to enable/disable when needed
 
+## Like this solution?
+Found this helpful? Consider giving it a ⭐ star on GitHub! It helps others find the solution and motivates me to keep improving it.
+
 ## Installation
 1. Download this repository as ZIP (or clone it)
 2. Open Chrome and navigate to `chrome://extensions/`
